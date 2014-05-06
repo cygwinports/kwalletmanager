@@ -1,8 +1,10 @@
 inherit kde4
 
-NAME="kwallet"
-VERSION=4.11.5
+NAME="kwalletmanager"
+VERSION=4.12.5
 RELEASE=1
 CATEGORY="KDE"
 SUMMARY="KDE wallet manager"
 DESCRIPTION="Part of the KDE utilities suite"
+
+OBSOLETES="kwallet"
