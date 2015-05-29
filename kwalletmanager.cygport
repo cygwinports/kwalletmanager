@@ -8,3 +8,4 @@ SUMMARY="KDE wallet manager"
 DESCRIPTION="Part of the KDE utilities suite"
 
 OBSOLETES="kwallet"
+REQUIRES="kde-runtime"
