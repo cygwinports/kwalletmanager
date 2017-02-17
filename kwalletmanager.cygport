@@ -2,10 +2,29 @@ inherit kde4
 
 NAME="kwalletmanager"
 VERSION=15.04.3
-RELEASE=1
+RELEASE=2
 CATEGORY="KDE"
 SUMMARY="KDE wallet manager"
 DESCRIPTION="Part of the KDE utilities suite"
 
-OBSOLETES="kwallet"
-REQUIRES="kde-runtime"
+kwalletmanager_OBSOLETES="kwallet"
+kwalletmanager_REQUIRES="kde-runtime kwalletmanager-common"
+kwalletmanager_CONTENTS="
+	etc/dbus-1/system.d/org.kde.kcontrol.kcmkwallet.conf
+	etc/postinstall/kwalletmanager.sh
+	usr/bin/kwalletmanager.exe
+	usr/lib/kde4/kcm_kwallet.dll
+	usr/lib/kde4/libexec/kcm_kwallet_helper.exe
+	usr/share/applications/kde4/kwalletmanager-kwalletd.desktop
+	usr/share/applications/kde4/kwalletmanager.desktop
+	usr/share/dbus-1/system-services/org.kde.kcontrol.kcmkwallet.service
+	usr/share/doc/HTML/en/kwallet/
+	usr/share/doc/${NAME}/
+	usr/share/kde4/apps/${NAME}/
+	usr/share/kde4/services/kwalletconfig.desktop
+	usr/share/kde4/services/kwalletmanager_show.desktop
+"
+PKG_IGNORE="
+	usr/share/icons/hicolor/*/apps/kwalletmanager.png
+	usr/share/icons/hicolor/*/apps/kwalletmanager2.png
+"
